@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router()
 const SpotifyWebApi = require("spotify-web-api-node");
-
+const mongoose = require('mongoose');
+const Playlist = mongoose.models.Playlist || require('../model/Playlist')
 
 const tokenVerification = async (req, res, next) => {
   spotifyApi.getMe().then(userInfo => {
@@ -13,11 +14,26 @@ const tokenVerification = async (req, res, next) => {
     }
   }).catch(e => {
     if (e.statusCode === 401) {
-      res.redirect('/login')
+      spotifyLogin(res);
     } else {
       res.send(e)
     }
   });
+};
+
+
+const getPlaylistById = async (req, res, next) => {
+  try {
+    let playlist = await Playlist.findById(req.params.id);
+    if (playlist === null) {
+      res.status(404).json({erro: 'Não foi encontrado uma Playlist com o id informado'});
+    } else {
+      req.playlist = playlist;
+      next();
+    }
+  } catch (erro) {
+    res.status(500).json({erro: 'O id informado não é válido'});
+  }
 };
 
 
@@ -33,13 +49,14 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: '2ca22dc7f6214ec9b9d879bfb1560fca'
 });
 
+const spotifyLogin = (res) => {
+  const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state, false);
+  res.send({spotifyAuth: false, authorizeURL});
+}
 
 router.use('/login', ((req, res) => {
 // Create the authorization URL
-  const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state, false);
-
-  res.redirect(authorizeURL)
-
+  spotifyLogin(res);
   console.log('URL de Autorizacao:', authorizeURL);
 }));
 
@@ -71,12 +88,12 @@ router.use('/callback', ((req, res) => {
 
 router.get('/search', tokenVerification, (req, res) => {
   console.log('search')
-  spotifyApi.search(req.query.q, ['track', 'artist']).then(result => {
+  spotifyApi.search(req.query.q, ['track']).then(result => {
     res.send(result.body.tracks.items.map(track => {
       return {
         id: track.id,
         title: track.name,
-        artists: track.artists,
+        artists: track.artists.length ? track.artists.map(artist => artist.name) : [],
         album: track.album.name,
         popularity: track.popularity,
         albumImgUrl: track.album.images[0] ? track.album.images[0].url : ''
@@ -102,7 +119,7 @@ router.get('/playlists', tokenVerification, ((req, res) => {
     })
   }).catch(e => {
     if (e.statusCode === 401) {
-      res.redirect('/login')
+      spotifyLogin(res);
     } else {
       res.send(e)
     }
@@ -113,6 +130,21 @@ router.get('/playlists', tokenVerification, ((req, res) => {
 router.post('/playlist', tokenVerification, (req, res) => {
   spotifyApi.createPlaylist(req.userId, req.body.title)
     .then(value => res.send(value))
+    .catch(e => res.send(e));
+});
+
+router.get('/playlist/:id', tokenVerification, (req, res) => {
+  spotifyApi.getPlaylistTracks(req.params.id, {fields: 'items(track)'})
+    .then(value => res.send(value.body.items.map(item => {
+      return {
+        id: item.track.id,
+        title: item.track.name,
+        artists: item.track.artists.length ? item.track.artists.map(artist => artist.name) : [],
+        album: item.track.album.name,
+        popularity: item.track.popularity,
+        albumImgUrl: item.track.album.images[0] ? item.track.album.images[0].url : ''
+      }
+    })))
     .catch(e => res.send(e));
 });
 

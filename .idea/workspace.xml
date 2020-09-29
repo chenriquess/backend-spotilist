@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="334515dc-a3b8-497d-b7bd-970c1aa26c52" name="Default Changelist" comment="" />
+    <list default="true" id="334515dc-a3b8-497d-b7bd-970c1aa26c52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/SpotifyApiController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SpotifyApiController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1h1C4Hkadr1niIm7a69MAbLCZsW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,7 +59,9 @@
       <workItem from="1599758163733" duration="5837000" />
       <workItem from="1599831538581" duration="4628000" />
       <workItem from="1601144550612" duration="13372000" />
-      <workItem from="1601214660774" duration="9998000" />
+      <workItem from="1601214660774" duration="10062000" />
+      <workItem from="1601296589397" duration="7192000" />
+      <workItem from="1601421233838" duration="1522000" />
     </task>
     <servers />
   </component>
@@ -72,26 +81,26 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1652" y="315" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1601177107732" />
-    <state width="2539" height="311" key="GridCell.Tab.0.bottom" timestamp="1601262040907">
+    <state width="1256" height="284" key="GridCell.Tab.0.bottom" timestamp="1601341042446">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2539" height="311" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1601262040907" />
-    <state width="2539" height="311" key="GridCell.Tab.0.center" timestamp="1601262040907">
+    <state width="1256" height="284" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
+    <state width="1256" height="284" key="GridCell.Tab.0.center" timestamp="1601341042446">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2539" height="311" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1601262040907" />
-    <state width="2539" height="311" key="GridCell.Tab.0.left" timestamp="1601262040907">
+    <state width="1256" height="284" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
+    <state width="1256" height="284" key="GridCell.Tab.0.left" timestamp="1601341042446">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2539" height="311" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1601262040907" />
-    <state width="2539" height="311" key="GridCell.Tab.0.right" timestamp="1601262040907">
+    <state width="1256" height="284" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
+    <state width="1256" height="284" key="GridCell.Tab.0.right" timestamp="1601341042446">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2539" height="311" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1601262040907" />
-    <state x="1308" y="279" width="585" height="534" key="find.popup" timestamp="1601183666969">
+    <state width="1256" height="284" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
+    <state x="1308" y="279" width="585" height="534" key="find.popup" timestamp="1601335649171">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1308" y="279" width="585" height="534" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1601183666969" />
+    <state x="1308" y="279" width="585" height="534" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1601335649170" />
     <state x="439" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1601151279909">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
