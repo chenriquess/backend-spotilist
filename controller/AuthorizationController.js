@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt');
 JWT_SECRET = process.env.JWT_SECRET;
 
 router.post('/', async (req, res) => {
-  console.log('asd', req.body)
   let usuario = await User.findOne({email: req.body.email});
 
   if (usuario === null) {

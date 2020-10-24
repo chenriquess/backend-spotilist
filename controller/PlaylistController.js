@@ -4,7 +4,7 @@ const Playlist = require('../model/playlist');
 
 const getPlaylistPorId = async (req, res, next) => {
   try {
-    let playlist = await Playlist.findById(req.path.id);
+    let playlist = await Playlist.findById(req.params.id);
 
     if (playlist === null) {
       res.status(404).json({erro: `Playlist com id ${req.params.id} não encontrado`});
@@ -31,7 +31,9 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', getPlaylistPorId, async (req, res) => {
-  await Playlist.update(req.body);
+  req.playlist.title = req.body.title;
+  req.playlist.songs = req.body.songs || [];
+  req.playlist.save();
   res.send('Playlist atualizada com sucesso!');
 });
 

@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="334515dc-a3b8-497d-b7bd-970c1aa26c52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfg/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/cfg/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AuthorizationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AuthorizationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/PlaylistController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PlaylistController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/SpotifyApiController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SpotifyApiController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Playlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Playlist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +17,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1h1C4Hkadr1niIm7a69MAbLCZsW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,8 +34,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT&#10;JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spotilite-frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -61,7 +73,10 @@
       <workItem from="1601144550612" duration="13372000" />
       <workItem from="1601214660774" duration="10062000" />
       <workItem from="1601296589397" duration="7192000" />
-      <workItem from="1601421233838" duration="1522000" />
+      <workItem from="1601421233838" duration="8287000" />
+      <workItem from="1601508504978" duration="113000" />
+      <workItem from="1601508720477" duration="1330000" />
+      <workItem from="1601552639439" duration="10670000" />
     </task>
     <servers />
   </component>
@@ -77,30 +92,42 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1369" y="348" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1601249932710" />
-    <state x="1652" y="315" key="FileChooserDialogImpl" timestamp="1601177107732">
+    <state x="489" y="109" width="1418" height="880" key="DiffContextDialog" timestamp="1601423934213">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1652" y="315" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1601177107732" />
-    <state width="1256" height="284" key="GridCell.Tab.0.bottom" timestamp="1601341042446">
+    <state x="489" y="109" width="1418" height="880" key="DiffContextDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1601423934213" />
+    <state x="1652" y="315" key="FileChooserDialogImpl" timestamp="1601566680508">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1256" height="284" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
-    <state width="1256" height="284" key="GridCell.Tab.0.center" timestamp="1601341042446">
+    <state x="1652" y="315" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1601566680508" />
+    <state width="2539" height="307" key="GridCell.Tab.0.bottom" timestamp="1601599972004">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2539" height="307" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.2560.1080@1920.0.2560.1080" timestamp="1601599972004" />
+    <state width="1580" height="307" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1601574066045" />
+    <state width="2539" height="307" key="GridCell.Tab.0.center" timestamp="1601599972004">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2539" height="307" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.2560.1080@1920.0.2560.1080" timestamp="1601599972004" />
+    <state width="1580" height="307" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1601574066045" />
+    <state width="2539" height="307" key="GridCell.Tab.0.left" timestamp="1601599972004">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2539" height="307" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.2560.1080@1920.0.2560.1080" timestamp="1601599972004" />
+    <state width="1580" height="307" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1601574066045" />
+    <state width="2539" height="307" key="GridCell.Tab.0.right" timestamp="1601599972004">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2539" height="307" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.2560.1080@1920.0.2560.1080" timestamp="1601599972004" />
+    <state width="1580" height="307" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1601574066045" />
+    <state x="699" y="193" width="1224" height="711" key="SettingsEditor" timestamp="1601425579830">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1256" height="284" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
-    <state width="1256" height="284" key="GridCell.Tab.0.left" timestamp="1601341042446">
+    <state x="699" y="193" width="1224" height="711" key="SettingsEditor/0.0.2560.1080@0.0.2560.1080" timestamp="1601425579830" />
+    <state x="1308" y="279" width="585" height="534" key="find.popup" timestamp="1601574576302">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1256" height="284" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
-    <state width="1256" height="284" key="GridCell.Tab.0.right" timestamp="1601341042446">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1256" height="284" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1601341042446" />
-    <state x="1308" y="279" width="585" height="534" key="find.popup" timestamp="1601335649171">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1308" y="279" width="585" height="534" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1601335649170" />
+    <state x="1308" y="279" width="585" height="534" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1601574576302" />
     <state x="439" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1601151279909">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
